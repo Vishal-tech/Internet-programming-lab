@@ -1,0 +1,56 @@
+<!Doctype HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="style.css">
+<script src="script.js"></script>
+<title>Employee Form</title>
+</head>
+<body>
+<div class="divform">
+<h1 class="heading">EMPLOYEE REGISTRATION FORM</h1>
+<br><br><br>
+<form name="form1" method="POST" action="http://localhost:8080/Project2/Employee">
+<label for="eid">EMPLOYEE ID</label><br>
+<input type= "text" id="eid" name="EID" pattern=[A-Za-z]{3}-[0-9]{3} onfocus="foc(this)" onblur="blr(this)" placeholder="Enter your Employee ID" required><br><br>
+<label for="Name">EMPLOYEE NAME</label><br>
+<input type= "text" id="name" name="Name" onfocus="foc(this)" onblur="blr(this)" placeholder="Enter your name" required><br><br>
+<label for="dob">DOB</label><br>
+<input type="date" id="dob" name="DOB"><br><br>
+<label for="gender">GENDER</label><br><br>
+<input type="radio" id="Male" name="Gender" value="Male" required>
+<label for="male">Male</label><br>
+<input type="radio" id="Female" name="Gender" value="Female">
+<label for="female">Female</label><br>
+<input type="radio" id="Other" name="Gender" value="Other">
+<label for="other">Other</label><br><br>
+<label for="addr">ADDRESS</label><br>
+<textarea type="text" id="addr" name="Address" required></textarea><br><br>
+<label for="status">MARITAL STATUS</label><br>
+<select name="Marital Status" id="mat" onfocus="foc(this)" required onblur="blr(this)" >
+<option value="Married">Married</option>
+<option value="Single">Single</option>
+</select><br><br>
+<label for="dep">DEPARTMENT</label><br>
+<input type= "text" id="dep" name="Department" onfocus="foc(this)" onblur="blr(this)" placeholder="Enter name" required><br><br>
+<label for="desig">DESIGNATION</label><br>
+<select name="Designation" id="desig" onfocus="func(this)" required onblur="func1(this)" >
+<option value="Manager">Manager</option>
+<option value="Employee">Employee</option>
+<option value="Intern">Intern</option>
+<option value="Receptionist">Receptionist</option>
+<option value="Sales Representative">Sales Rep</option>
+</select><br><br>
+<label for="phone">PHONE NUMBER</label><br>
+<input type="tel" id="phone" name="Contact" oninvalid="inv(this)" required min=10 PATTERN=[0-9]{10} placeholder="Enter phone number"><br><br>
+<label for="sal">BASIC PAY</label><br>
+<input type= "number" id="sal" name="Basic Pay" onfocus="foc(this)" onblur="blr(this)" placeholder="Enter Basic pay" required><br><br>
+<input type="submit" value="SUBMIT" >
+<input type="reset" value="RESET">
+</form>
+</div>
+</body>
+</html>
+
+

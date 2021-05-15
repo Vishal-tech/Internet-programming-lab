@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Hospital reg_form</title>
+  </head>
+
+  <body background="Images/bg.png" onload="startTime()" style="height: 120%;">
+  <div id="container">
+  <header>
+    <div class="heading">
+         <p id="clock" style="text-align: right;"></p>
+        <img id="logo" src="Images/hospital.png" width="70" height="50" class="logo" style="display:inline-block;"></img>
+        
+        <br>
+          <h1>Hospital Management System</h1>    
+      </div>
+    </header>
+<h2 id="form_title">New patient Registration</h2>
+<br>
+
+<table align="center">
+<td>
+<form id="myform">
+<label for="name">Name</label>
+<input name="name" type="text" id="name" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninvalid="nInvalidFunc()" required><br>
+<br>
+
+<label for="add">Address</label>
+<textarea id="add" name="add" rows="4" cols="50" onfocus="focusFunction(this)" onblur="blurFunction(this)" onselect="selectFunc()"></textarea><br><br>
+
+<label for="age">Age</label>
+<input name="age" type="number" id="age" onfocus="focusFunction(this)" onblur="blurFunction(this)" onkeypress="okpFunc()"><br>
+
+<label for="dob">DOB</label>
+<input name="dob" type="date" id="dob" onfocus="focusFunction(this)" onblur="blurFunction(this)"><br>
+
+<label for="sex">Gender</label>
+<input name="sex" type="radio" value="Male" id="sex1">Male
+<input name="sex" type="radio" value="Female" id="sex2">Female
+<input name="sex" type="radio" value="Others" id="sex3">Others
+<br>
+
+<label for="ms">Marital Status</label>
+<input name="ms" type="radio" value="Married" id="ms1" onchange="msFunc(this)">Married
+<input name="ms" type="radio" value="Unmarried" id="ms2" onchange="msFunc(this)">Unmarried
+<br>
+
+
+<label for="phno">Contact number</label>
+<input name="phno" type="tel" id="phno" maxlength="10" onfocus="focusFunction(this)" onblur="blurFunction(this)" oninvalid="phInvalidFunc()" required><br>
+<br>
+
+<label for="addic">Addictions(if any)</label>
+<textarea id="addic" rows="4" cols="30"></textarea>
+  <p id="addic1" draggable="true" style="border: 1px solid black;display: inline-block;">Smoking</p>
+  <p id="addic2" draggable="true" style="border: 1px solid black;display: inline-block;">Drinking</p>
+  <br>
+
+
+<button type="submit" onclick="submitFunc()">Submit</button>
+<button type="reset" onclick="resetFunc()">Reset</button>
+</td>
+
+</table>
+</form>
+  <div id="footer">
+  <footer>
+    <p style="text-align: center;"> This website is created by Vishal T</p>
+  </footer>
+  </div>
+</div>
+</body>
+</html>

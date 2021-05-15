@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Memory Game</title>
+  <script>
+    var mixBut = document.getElementById("mixBut");
+    mixBut.addEventListener("onclick", Start);
+
+    function Start(){
+    console.log("Started");
+    mixBut.removeEventListener("onclick", Start);
+    mixBut.addEventListener("onclick", Stop);
+    mixBut.value = "Stop";
+    }
+
+    function Stop(){
+        console.log("Stopped");
+        mixBut.removeEventListener("onclick", Stop);
+        mixBut.addEventListener("onclick", Start);
+        mixBut.value = "Start";
+    }
+  </script>
+</head>
+<body>
+    <input type="button" id="mixBut" value="Start">  
+</body>
+</html>

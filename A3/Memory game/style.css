@@ -1,0 +1,17 @@
+h1{
+  color: blue;
+  text-decoration: underline;
+  text-align: center;
+}
+
+input{
+  margin: 20px;
+  font-size: 30px;
+}
+
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    width: 400px;
+    height: 300px;
+  }

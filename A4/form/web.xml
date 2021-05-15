@@ -1,0 +1,10 @@
+<web-app>
+<servlet>
+<servlet-name>Employee-Form</servlet-name>
+<servlet-class>Employee</servlet-class>
+</servlet>
+<servlet-mapping>
+<servlet-name>Employee-Form</servlet-name>
+<url-pattern>/Employee</url-pattern>
+</servlet-mapping>
+</web-app>

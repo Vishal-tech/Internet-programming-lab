@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang=en>
+<head>
+<meta charset ="utf-8">
+<meta name="viewport" content="width=device-width, initial- scale=1,shrink-to-fit=no">
+<title>Select Country</title>
+<style> 
+body{
+    text-align: center;
+    justify-content: center;
+    align-content:center;
+    background-color: #fff34ee5
+}
+h1{
+    text-align:center;
+    font-size: 50px;
+    color: rgb(0, 0, 0); 
+    margin-top:120px;
+}
+#selection{
+    border: 4px dotted rgb(0, 0, 0);
+    border-radius: 10px;
+    text-align: center;
+    justify-content: center; 
+    margin:auto;
+    max-width: 650px;
+    min-height: 200px;
+    align-content:center;
+}
+#selection label{
+    margin-top: 90px;
+}
+#selection input{
+    margin-top: 90px;
+    min-width: 400px;
+}
+</style>
+</head>
+<body>
+<h1>Select the Country</h1>
+<br><br><br>
+<div id="selection">
+<label for="country" style="color: rgb(0, 0, 0); font-size:30px;">Country &emsp;&nbsp;</label>
+<input type="text" id="country" list="countries" onkeyup="getCountry()" /><datalist id ="countries">
+</datalist>
+</div>
+<script>
+function fetch(country){
+var request = new XMLHttpRequest();
+var URL = "country?country="+country;
+request.onreadystatechange = function(){ 
+    if(this.readyState == 4 && this.status == 200) {
+    var val = request.responseText;
+    console.log(val);
+    document.getElementById("countries").innerHTML = val;
+    }
+};
+request.open('GET', URL, true);
+request.send();
+}
+function getCountry(){
+var country = document.getElementById("country").value; 
+fetch(country);
+}
+</script>
+</body>
+</html>

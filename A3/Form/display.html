@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <title>Hospital reg_form</title>
+    <style>
+      table, th, td {
+        border: 1px solid black;
+      }
+    </style>
+    <script>
+       function init() {
+        // Retrieving the text input's value which was stored into localStorage
+        var myname = localStorage.getItem("name");
+        var myadd = localStorage.getItem("add");
+        var myage = localStorage.getItem("age");
+        var mydob = localStorage.getItem("dob");
+        var mygen = localStorage.getItem("sex");
+        var myms = localStorage.getItem("ms");
+        var myphno = localStorage.getItem("phno");
+        var myaddic = localStorage.getItem("addic");
+
+        
+        // Writing the value in the document
+        document.getElementById("myname").innerHTML= myname;
+        document.getElementById("myadd").innerHTML= myadd;
+        document.getElementById("myage").innerHTML= myage;
+        document.getElementById("mydob").innerHTML= mydob;
+        document.getElementById("mygen").innerHTML= mygen;
+        document.getElementById("myms").innerHTML= myms;
+        document.getElementById("mycontact").innerHTML= myphno;
+        document.getElementById("myaddic").innerHTML= myaddic;
+
+    }
+    </script>
+  </head>
+
+  <body background="Images/bg.png" onload="startTime();init()" style="height: 120%;">
+  <div id="container">
+  <header>
+    <div class="heading">
+         <p id="clock" style="text-align: right;"></p>
+        <img id="logo" src="Images/hospital.png" width="70" height="50" class="logo" style="display:inline-block;"></img>
+        
+        <br>
+          <h1>Hospital Management System</h1>    
+      </div>
+    </header>
+
+<table align="center">
+  <caption>Patient's Details</caption>s
+  <tr>
+    <td>Name</td>
+    <td id="myname"></td>
+  </tr>
+  <tr>
+    <td>Address</td>
+    <td id="myadd"></td>
+  </tr>
+  <tr>
+    <td>Age</td>
+    <td id="myage"></td>
+  </tr>
+  <tr>
+    <td>DOB</td>
+    <td id="mydob"></td>
+  </tr>
+  <tr>
+    <td>Gender</td>
+    <td id="mygen"></td>
+  </tr>
+  <tr>
+    <td>Martital Status</td>
+    <td id="myms"></td>
+  </tr>
+  <tr>
+    <td>Contact Number</td>
+    <td id="mycontact"></td>
+  </tr>
+  <tr>
+    <td>Addictions</td>
+    <td id="myaddic"></td>
+  </tr>
+</table>
+<div id="footer">
+  <footer>
+    <p style="text-align: center;"> This website is created by Vishal T</p>
+  </footer>
+  </div>
+</div>
+</body>
+</html>
